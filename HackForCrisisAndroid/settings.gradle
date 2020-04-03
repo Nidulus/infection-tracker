@@ -1,0 +1,2 @@
+rootProject.name='HackForCrisis'
+include ':app'
