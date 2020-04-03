@@ -40,6 +40,10 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
+    /*RetroFit*/
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
     /*Test*/
     testImplementation 'junit:junit:4.12'
     testImplementation "io.mockk:mockk:1.4.1"
