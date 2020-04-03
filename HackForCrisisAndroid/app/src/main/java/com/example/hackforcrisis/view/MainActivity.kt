@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hackforcrisis.R
 import com.example.hackforcrisis.module.module
+import com.example.hackforcrisis.viewmodel.LoginViewModel
 import org.koin.core.context.startKoin
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.main, LoginFragment(), TAG)
                 .commit();
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 
     companion object {
