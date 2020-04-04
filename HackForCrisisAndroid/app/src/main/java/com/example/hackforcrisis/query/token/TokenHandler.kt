@@ -1,5 +1,6 @@
 package com.example.hackforcrisis.query.token
 
+import android.util.Log
 import com.example.hackforcrisis.model.LoginRequest
 import io.reactivex.Single
 import retrofit2.Call
@@ -37,6 +38,7 @@ class TokenHandler {
     }
 
     private fun getAccessToken(response: Response<TokenResponse>): String? {
+        Log.d("Response:" , response.message())
         return if (response.isSuccessful) {
             response.body()?.accessToken
         } else {
