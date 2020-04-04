@@ -52,12 +52,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The time between getting infected and developing symptoms (the incubation period) seems to be between 2 and 14 days. Most people develop symptoms after 5 days. Individual cases may deviate from this time frame.
-
-It is very important that you stay at home if you feel ill. If you can no longer manage the illness on your own, please call 1177 for medical advice"
+        android:text="@string/info"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/large_margin"
         android:layout_marginBottom="@dimen/large_margin"
         />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:onClick="senddata"
+        android:text="@string/send_data" />
 
 </LinearLayout>

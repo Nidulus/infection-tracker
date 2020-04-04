@@ -11,4 +11,6 @@
     <string name="headache">headache</string>
     <string name="nausea">nausea</string>
     <string name="muscle_and_joint_pain">muscle and joint pain</string>
+    <string name="send_data">Send Data</string>
+    <string name="info">The time between getting infected and developing symptoms (the incubation period) seems to be between 2 and 14 days. Most people develop symptoms after 5 days. Individual cases may deviate from this time frame. It is very important that you stay at home if you feel ill. If you can no longer manage the illness on your own, please call 1177 for medical advice</string>
 </resources>
