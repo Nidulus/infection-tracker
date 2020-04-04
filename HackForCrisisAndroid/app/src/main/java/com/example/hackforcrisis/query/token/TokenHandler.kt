@@ -1,4 +1,4 @@
-package com.example.hackforcrisis.token
+package com.example.hackforcrisis.query.token
 
 import com.example.hackforcrisis.model.LoginRequest
 import io.reactivex.Single

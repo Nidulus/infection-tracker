@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.hackforcrisis.R
 import com.example.hackforcrisis.model.LoginRequest
-import com.example.hackforcrisis.token.TokenHandler
+import com.example.hackforcrisis.query.token.TokenHandler
 import com.example.hackforcrisis.viewmodel.LoginViewModel
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.login_fragment.*
