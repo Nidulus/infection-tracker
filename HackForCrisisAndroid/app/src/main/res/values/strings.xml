@@ -5,4 +5,6 @@
     <string name="password">Password</string>
     <string name="signin">SignIn</string>
     <string name="signup">SignUp</string>
+    <string name="temp">temp</string>
+    <string name="temp2">temp2</string>
 </resources>
