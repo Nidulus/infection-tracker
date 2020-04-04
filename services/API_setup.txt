@@ -1,0 +1,113 @@
+To access the platform GUI go to http://98.128.172.115:7999
+username: admin
+password: password123
+
+I created all 4x API’s and configured endpoints + deployed services (not all services are done, it_timepoint is done but not tested)
+
+All 4x API’s have its own basic authentication service, with its own pre-stored user/pass in a separate user collection per API (not possible to log in to one API and use the token to call another API).
+
+
+Location API:
+url - http://98.128.172.115:6001
+endpoints:
+    /auth/login (HTTP POST)
+    /auth/refresh_token (HTTP POST)
+    /timepoint (HTTP POST)
+
+
+Healthcare API:
+url - http://98.128.172.115:6002
+endpoints:
+    /auth/login (HTTP POST)
+    /auth/refresh_token (HTTP POST)
+
+
+Search API:
+url - http://98.128.172.115:6003
+endpoints:
+    /auth/login (HTTP POST)
+    /auth/refresh_token (HTTP POST)
+    /search (HTTP POST)
+
+
+Mobile API:
+url - http://98.128.172.115:6004
+endpoints:
+    /auth/login (HTTP POST)
+    /auth/refresh_token (HTTP POST)
+    /symptoms (HTTP POST)
+
+
+To access any endpoint besides the “/auth/login”, you first need to login to the specific API.
+
+Do an HTTP POST with a HTTP Body like this:
+
+{
+  “user”: “xxxxxxxx”,
+  “password”: “xxxxxxxx”
+}
+
+You will then get a reply with a response body like this:
+
+{
+  “status”: 200,
+  “message”: {
+    “token”: “xxxxxxxxxxxxxxxxxxxxxxxxxxx”,
+    “expires”: “a date object 15 mins from now”
+  }
+}
+
+Now you can do the API call and setting message.token in your HTTP Header like this:
+
+{“Authentication”: “xxxxxxxxxxxxxxxxxxxxxxxxxxx”}
+
+
+
+Example, upload a timepoint:
+
+1: HTTP POST to http://98.128.172.115:6001/auth/login with body:
+
+  {
+    “user”: “location”,
+    “password”: “location”
+  }
+
+2: Store token from response
+
+3: HTTP POST to http://98.128.172.115:6001/timepoint with header:
+
+  {“Authentication”: “xxxxxxxxxxxxxxxxxxxxxxxxxxx”}
+
+  and body:
+
+  {
+    “citizen_id”: “123456”,
+    “lat”: “some latitude”,
+    “long”: “”some longitude”,
+    “timestamp”: “some timestamp”
+  }
+
+
+
+User/pass for each API is:
+
+Healthcare API - healthcare/healthcare
+Location API - location/location
+Mobile API - mobile/mobile
+Search API - search/search
+
+
+
+All services are named like it_xxxxxxx where “it” stands for “infection tracker”.
+
+The mobile api’s “symptoms” service just returns a “Hello World” no matter what we send to it, for now. And the Search will just list all location points that we stored from the location api. Healthcare has no service except for login, yet.
+
+I plan to fix at least 1 service for the Healthcare API (besides the existing auth service) and the Symptoms service for the Mobile API.
+
+So the Search service is the heavy one, and will be using data that all the other API’s stored. Location, Healthcare and Mobile, and we need to base the queries on input to the service. We could also split it up into several search/filter services as needed, the Search API could get more than just one “/search” endpoint, of course.
+
+Feel free to look around the existing services and navigate. You may also change/refactor/improve them if you think they should work differently. But do remember that the auth services are just for the demo, in reality they would most likely be replaced with bankId or some other existing SSO solution.
+
+Do not forget to run:
+sdk.exe —build it_xxxxxxx
+to get the .zip file in builds folder to upload when updating a service :)
