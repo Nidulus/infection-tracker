@@ -28,10 +28,4 @@ class LoginViewModel(private val tokenHandler: TokenHandler) : ViewModel() {
                 .subscribe()
         }, BackpressureStrategy.LATEST)
     }
-
-
-    private fun loginSuccess() {
-
-    }
-
 }
