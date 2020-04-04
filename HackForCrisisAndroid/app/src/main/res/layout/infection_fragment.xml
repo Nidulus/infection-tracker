@@ -2,17 +2,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
     android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/checkbox_temp"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temp" />
+        android:text="@string/symptoms"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginBottom="@dimen/large_margin"
+        />
 
     <CheckBox
-        android:id="@+id/checkbox_temp2"
+        android:id="@+id/checkbox_nose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temp2" />
+        android:layout_gravity="left"
+        android:text="@string/nose" />
+
+    <CheckBox
+        android:id="@+id/checkbox_throat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/throat" />
+
+    <CheckBox
+        android:id="@+id/checkbox_headache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/headache" />
+    <CheckBox
+        android:id="@+id/checkbox_nausea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/nausea" />
+
+    <CheckBox
+        android:id="@+id/checkbox_muscle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/muscle_and_joint_pain" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The time between getting infected and developing symptoms (the incubation period) seems to be between 2 and 14 days. Most people develop symptoms after 5 days. Individual cases may deviate from this time frame.
+
+It is very important that you stay at home if you feel ill. If you can no longer manage the illness on your own, please call 1177 for medical advice"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginBottom="@dimen/large_margin"
+        />
+
 </LinearLayout>

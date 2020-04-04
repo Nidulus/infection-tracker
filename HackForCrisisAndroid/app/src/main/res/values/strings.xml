@@ -5,6 +5,10 @@
     <string name="password">Password</string>
     <string name="signin">SignIn</string>
     <string name="signup">SignUp</string>
-    <string name="temp">temp</string>
-    <string name="temp2">temp2</string>
+    <string name="nose">runny or blocked nose</string>
+    <string name="throat">sore throat</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="headache">headache</string>
+    <string name="nausea">nausea</string>
+    <string name="muscle_and_joint_pain">muscle and joint pain</string>
 </resources>
