@@ -1,0 +1,4 @@
+{
+    "mongodb_url": "mongodb://infectiontracker:k5r732d9b53f@localhost:27017/infectiontracker",
+    "server_secret": "6u6WdodjoMzTnVvzpDYy"
+}

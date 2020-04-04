@@ -1,0 +1,17 @@
+{
+    "name": "it_symptoms",
+    "version": "1.0.0",
+    "description": "",
+    "main": "svc.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "it_symptoms"
+    ],
+    "author": "",
+    "license": "Custom",
+    "dependencies": {
+        "jwt-simple": "^0.5.6"
+    }
+}
